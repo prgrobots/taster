@@ -179,11 +179,11 @@
 
 /* --- Top nav tabs — colour coded to match schedule sections ---
    Order: 1=Home  2=3D Printing  3=Robot Arm  4=Maqueen  5=Free Choice  6=Feedback */
-.md-tabs__item:nth-child(2) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-3d); }
-.md-tabs__item:nth-child(3) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-robot); }
-.md-tabs__item:nth-child(4) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-robot); }
-.md-tabs__item:nth-child(5) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-free); }
-.md-tabs__item:nth-child(6) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-break); }
+.md-tabs__item:nth-child(2) .md-tabs__link { background: var(--color-3d-light);    color: var(--color-3d-text)    !important; border-radius: 4px 4px 0 0; }
+.md-tabs__item:nth-child(3) .md-tabs__link { background: var(--color-robot-light);  color: var(--color-robot-text) !important; border-radius: 4px 4px 0 0; }
+.md-tabs__item:nth-child(4) .md-tabs__link { background: var(--color-robot-light);  color: var(--color-robot-text) !important; border-radius: 4px 4px 0 0; }
+.md-tabs__item:nth-child(5) .md-tabs__link { background: var(--color-free-light);   color: var(--color-free-text)  !important; border-radius: 4px 4px 0 0; }
+.md-tabs__item:nth-child(6) .md-tabs__link { background: var(--color-break-light);  color: var(--color-break-text) !important; border-radius: 4px 4px 0 0; }
 
 /* --- Tasklist checkboxes — bigger for easier clicking --- */
 .md-typeset .task-list-control .task-list-indicator::before {
