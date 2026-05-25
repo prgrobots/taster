@@ -54,6 +54,7 @@ nav:
     - "Challenge 1 — Make it Move": robotics/challenge-1.md
     - "Challenge 2 — Avoid Obstacles": robotics/challenge-2.md
     - "Challenge 3 — Follow a Line": robotics/challenge-3.md
+    - "Challenge 4 — Gamepad Remote": robotics/challenge-4.md
   - "⭐ Free Choice": free-time.md
 
 markdown_extensions:

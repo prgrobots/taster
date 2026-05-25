@@ -7,80 +7,89 @@ tags: [robotics]
 
 <span class="badge badge-robot">Robotics</span>
 
-Maqueen has an **ultrasonic sensor** on the front — it sends out a sound pulse and measures how long it takes to bounce back. That tells it how far away an obstacle is.
+One of the most common causes of road accidents is an unexpected obstacle. Real cars have collision-warning and automatic braking systems to help prevent this. In this challenge you'll give Maqueen the same superpower — using its ultrasonic distance sensor to detect obstacles and brake automatically.
 
-Your challenge: make Maqueen drive forward and **automatically turn away** when it gets too close to something.
+**Goals:**
 
----
-
-## ✅ Your checklist
-
-- [ ] Open a new MakeCode project (or keep your challenge 1 code)
-- [ ] Add the Maqueen extension
-- [ ] Make Maqueen drive forward by default
-- [ ] Read the ultrasonic sensor distance
-- [ ] If distance is less than 30cm → turn left or right
-- [ ] Download and test — put your hand in front of it!
-- [ ] **Bonus:** Can you make it beep when it detects something?
+- Learn how to use variables
+- Learn how to nest one condition block inside another
 
 ---
 
-## 🧩 How the ultrasonic sensor works
+## Step 1 — Create a new project
 
-!!! info "Sonar — just like a bat!"
-    The sensor sends out an ultrasonic pulse (too high-pitched to hear).
-    It measures how long the pulse takes to return.
-    Distance = speed of sound × time ÷ 2
+1. Go to [makecode.microbit.org](https://makecode.microbit.org/){ target="_blank" } and click **New Project**.
+2. Add the Maqueen Plus V2 extension (same as Challenge 1):
 
-The MakeCode block gives you the distance in **centimetres** automatically.
+    ```
+    https://github.com/DFRobot/pxt-DFRobot_MaqueenPlus_v20
+    ```
 
----
-
-## 🧩 Blocks you need
-
-```mermaid
-flowchart LR
-    subgraph maqueen ["🤖 Maqueen"]
-        M1["read ultrasonic sensor\nunit cm"]
-    end
-    subgraph logic ["🔵 Logic"]
-        L1["if ‹condition› then\n— else"]
-    end
-    subgraph math ["🟣 Math"]
-        Ma1["pick random 0 to 1"]
-    end
-
-    classDef mq fill:#00bcd4,stroke:#0097a7,color:#fff
-    classDef lo fill:#f9a825,stroke:#f57f17,color:#000
-    classDef ma fill:#7b1fa2,stroke:#4a148c,color:#fff
-    class M1 mq
-    class L1 lo
-    class Ma1 ma
-```
+![Create project with extension](https://dfimg.dfrobot.com/nobody/edu/9532cd4f39b6a8e2cf39f575b3546ef7.png)
 
 ---
 
-## 💡 Hint — the logic
+## Step 2 — Program it
 
-```mermaid
-flowchart TD
-    A([▶ forever]) --> B["distance = read ultrasonic sensor (cm)"]
-    B --> C{distance &lt; 30?}
-    C -- No\nclear ahead --> D["motor all move Forward"]
-    D --> B
-    C -- Yes\ntoo close! --> E["pick random 0 to 1"]
-    E --> F{random = 0?}
-    F -- Left --> G["motor left Backward\nmotor right Forward\npause 500ms"]
-    F -- Right --> H["motor left Forward\nmotor right Backward\npause 500ms"]
-    G --> B
-    H --> B
-```
+### Create a variable
+
+1. In the **Variables** toolbox, click **Make a Variable** and name it **distance**.
+
+    ![Create distance variable](https://dfimg.dfrobot.com/nobody/edu/55065b98d2415d49560d3cf6d97d0c9e.png)
+
+2. Inside the `forever` block, set **distance** to the value read from the ultrasonic sensor. This updates the distance reading continuously.
+
+    ![Set distance variable](https://dfimg.dfrobot.com/nobody/edu/7bee51875753460f8997851842091bbe.png)
+
+### Add the braking logic
+
+3. Now build the logic:
+    - If `distance < 50` the robot is getting close — keep going but sound the buzzer as a warning.
+    - If `distance < 30` the robot is very close — stop immediately.
+
+    ![Nested if logic overview](https://dfimg.dfrobot.com/5e49162af2c4183e48c5caa5/edu/c952f283ea72be726606a455c85f1028.png)
+
+4. The **inner** condition handles stopping: if `distance < 30` → stop all motors; otherwise → drive forward.
+
+    ![Inner if: stop or forward](https://dfimg.dfrobot.com/5e49162af2c4183e48c5caa5/edu/8eb103c8f38e9f66cb703f9366731a4e.png)
+
+5. The **outer** condition handles the buzzer: if `distance < 50` → buzzer on; otherwise → buzzer off.
+
+    ![Outer if: buzzer on or off](https://dfimg.dfrobot.com/5e49162af2c4183e48c5caa5/edu/e9daa36ba50e368105c309638971c64f.png)
+
+6. Your complete program should look like this:
+
+    ![Complete auto-braking program](https://dfimg.dfrobot.com/5e49162af2c4183e48c5caa5/edu/231ecf6a54489157a8b5db2febfb6e8a.png)
 
 ---
 
-## 🔗 Example code from the slides
+## Step 3 — Download
 
-This is the obstacle avoidance code from your teacher's demo:
+Send your program to the micro:bit as usual. See [Meet Maqueen](index.md#how-to-send-code-to-the-robot) if you need a reminder.
+
+---
+
+## Step 4 — See it in action!
+
+Turn on Maqueen and slowly move your hand toward the front of the robot:
+
+- When your hand is closer than **50 cm** → the buzzer beeps.
+- When your hand is closer than **30 cm** → the robot stops.
+
+![Effect: robot stops near obstacle](https://dfimg.dfrobot.com/5e49162af2c4183e48c5caa5/edu/b4d46e22d204ca36c9c2bca2b753d232.png)
+
+---
+
+## 🌟 Think & Explore — Obstacle Avoidance
+
+The auto-braking robot stops when it is too close to an obstacle. Can you go further and make it **steer around** the obstacle instead?
+
+Use the flowchart below as a guide:
+
+![Obstacle avoidance flowchart](https://dfimg.dfrobot.com/5e49162af2c4183e48c5caa5/edu/355e197993901413879fae76a7b6f455.png)
+
+!!! tip "Hint"
+    When the robot is too close, turn left (or right) for a short pause, then continue forward.
 
 [👉 Open obstacle avoidance code](https://makecode.microbit.org/64946-39354-43485-37140){ .md-button target="_blank" }
 
