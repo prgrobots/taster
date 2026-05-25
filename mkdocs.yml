@@ -46,7 +46,7 @@ nav:
     - "Behind the scenes — Printing": 3d-printing/printing.md
   - "🦾 Robot Arm":
     - "Meet xArm 2.0": xarm/index.md
-    - "Lesson — Fixed-Point Motion": xarm/lesson.md
+    - "Lesson — Pick & Place": xarm/lesson.md
     - "Challenge — Stack the Blocks!": xarm/challenge.md
     - "Advanced — Colour Sensor": xarm/advanced.md
   - "🤖 Maqueen Robotics":
