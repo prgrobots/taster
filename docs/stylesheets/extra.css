@@ -177,6 +177,14 @@
 .badge-robot { background: var(--color-robot); color: white; }
 .badge-free  { background: var(--color-free);  color: white; }
 
+/* --- Top nav tabs — colour coded to match schedule sections ---
+   Order: 1=Home  2=3D Printing  3=Robot Arm  4=Maqueen  5=Free Choice  6=Feedback */
+.md-tabs__item:nth-child(2) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-3d); }
+.md-tabs__item:nth-child(3) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-robot); }
+.md-tabs__item:nth-child(4) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-robot); }
+.md-tabs__item:nth-child(5) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-free); }
+.md-tabs__item:nth-child(6) .md-tabs__link { box-shadow: inset 0 -4px 0 var(--color-break); }
+
 /* --- Tasklist checkboxes — bigger for easier clicking --- */
 .md-typeset .task-list-control .task-list-indicator::before {
   width: 1.4rem;
