@@ -9,16 +9,6 @@ Today you'll **design a name tag**, **program a robot arm**, then **drive a Maqu
 
 ---
 
-<div class="login-box">
-  💻 <strong>Computer Login</strong>
-  <div class="login-row">
-    <span>Username: <code>tastee</code></span>
-    <span>Password: <code>Password1</code></span>
-  </div>
-</div>
-
----
-
 ## 🕐 Today's Schedule
 
 <div class="schedule-grid">
