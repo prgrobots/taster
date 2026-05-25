@@ -5,8 +5,8 @@ tags: [xarm]
 
 # 🦾 Meet the xArm 2.0
 
-<span class="badge badge-robot">Robot Arm</span>
-
+<span class="badge badge-robot"></span>
+![HiWonder PC Software interface|429](images/1.webp)
 This is a real **5-axis robot arm** — the same kind of technology used in factories, warehouses, and research labs. Today you'll program it using the **HiWonder PC Software**, which lets you build sequences of movements by adjusting servo sliders and recording each position.
 
 ---
@@ -56,7 +56,7 @@ This is a real **5-axis robot arm** — the same kind of technology used in fact
 
 ## The PC Software interface
 
-![HiWonder PC Software interface](images/interface-7.png)
+![HiWonder PC Software interface](images/interface-8.png)
 
 | Area | What it does |
 |---|---|
@@ -72,6 +72,9 @@ This is a real **5-axis robot arm** — the same kind of technology used in fact
 
 Instead of X/Y/Z coordinates, the arm uses **servo position values** for each of its 6 joints.
 
+<div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+<div>
+
 | Servo | Controls |
 |---|---|
 | **ID 1** | Base rotation (left/right) |
@@ -80,6 +83,10 @@ Instead of X/Y/Z coordinates, the arm uses **servo position values** for each of
 | **ID 4** | Wrist pitch |
 | **ID 5** | Wrist rotation |
 | **ID 6** | Gripper (open/close) |
+
+</div>
+<img src="../robotics/Pasted image 20260519124718.png" alt="xArm servo diagram" style="width: 470px; flex-shrink: 0;">
+</div>
 
 Each servo value runs from **0 to 1000**. You find the right position by moving the sliders and watching the arm respond in real time.
 
