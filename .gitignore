@@ -1,0 +1,24 @@
+# Large binary/media files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.flv
+*.webm
+
+# Large docs folders
+xArm AI - new docs/
+xArm 1S Robot Arm - old docs/
+xArm2/
+
+# Build output
+site/
+
+# Cache
+.cache/
+.firecrawl/
+.obsidian/
+
+# Large PDFs (root level)
+*.pdf

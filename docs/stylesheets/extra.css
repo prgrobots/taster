@@ -1,0 +1,273 @@
+/* ============================================================
+   TASTER SITE — extra.css
+   Colour system:
+     Blue  (#1565C0) = 3D Printing
+     Green (#2E7D32) = Robotics
+     Amber (#E65100) = Free Choice
+   ============================================================ */
+
+/* --- Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+/* --- Brand colour overrides for MkDocs Material --- */
+:root {
+  --md-primary-fg-color:        #1A237E;
+  --md-primary-fg-color--light: #3949AB;
+  --md-primary-fg-color--dark:  #0D1470;
+  --md-accent-fg-color:         #00BCD4;
+
+  /* Activity colours */
+  --color-3d:       #1565C0;
+  --color-3d-light: #E3F2FD;
+  --color-3d-text:  #0D47A1;
+
+  --color-robot:       #2E7D32;
+  --color-robot-light: #E8F5E9;
+  --color-robot-text:  #1B5E20;
+
+  --color-free:       #E65100;
+  --color-free-light: #FFF3E0;
+  --color-free-text:  #BF360C;
+
+  --color-break:       #546E7A;
+  --color-break-light: #ECEFF1;
+  --color-break-text:  #37474F;
+
+  /* Typography */
+  --md-text-font: "Nunito", sans-serif;
+  --step-size: 1.15rem;
+}
+
+/* --- Body — larger, rounder, friendlier --- */
+.md-typeset {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.md-typeset h1 { font-size: 2rem; font-weight: 800; }
+.md-typeset h2 { font-size: 1.5rem; font-weight: 700; }
+.md-typeset h3 { font-size: 1.2rem; font-weight: 700; }
+
+/* --- Schedule timeline card grid --- */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.schedule-card {
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4;
+  border: 2px solid transparent;
+}
+
+.schedule-card .time {
+  font-size: 1.3rem;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.schedule-card .label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.card-3d     { background: var(--color-3d-light);    color: var(--color-3d-text);    border-color: var(--color-3d); }
+.card-robot  { background: var(--color-robot-light);  color: var(--color-robot-text); border-color: var(--color-robot); }
+.card-free   { background: var(--color-free-light);   color: var(--color-free-text);  border-color: var(--color-free); }
+.card-break  { background: var(--color-break-light);  color: var(--color-break-text); border-color: var(--color-break); }
+.card-now    { outline: 4px solid #FFD600; outline-offset: 2px; }
+
+/* --- Pipeline steps (Design → Export → Slice → Print) --- */
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  counter-reset: pipeline-counter;
+}
+
+.pipeline-step {
+  background: var(--color-3d-light);
+  border: 2px solid var(--color-3d);
+  border-radius: 12px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  position: relative;
+  counter-increment: pipeline-counter;
+}
+
+.pipeline-step::before {
+  content: counter(pipeline-counter);
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: var(--color-3d);
+  color: white;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 2rem;
+  margin: 0 auto 0.5rem;
+}
+
+.pipeline-step .step-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.pipeline-step .step-label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-3d-text);
+  display: block;
+}
+
+.pipeline-step .step-desc {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Robotics pipeline uses green */
+.pipeline-robot .pipeline-step {
+  background: var(--color-robot-light);
+  border-color: var(--color-robot);
+}
+.pipeline-robot .pipeline-step::before {
+  background: var(--color-robot);
+}
+.pipeline-robot .pipeline-step .step-label {
+  color: var(--color-robot-text);
+}
+
+/* --- Challenge cards --- */
+.challenge-card {
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+  border-left: 6px solid var(--color-robot);
+  background: var(--color-robot-light);
+}
+
+.challenge-card h3 {
+  color: var(--color-robot-text);
+  margin-top: 0;
+}
+
+/* --- Activity badge labels --- */
+.badge {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+.badge-3d    { background: var(--color-3d);    color: white; }
+.badge-robot { background: var(--color-robot); color: white; }
+.badge-free  { background: var(--color-free);  color: white; }
+
+/* --- Tasklist checkboxes — bigger for easier clicking --- */
+.md-typeset .task-list-control .task-list-indicator::before {
+  width: 1.4rem;
+  height: 1.4rem;
+  top: -0.1rem;
+}
+
+/* --- Admonition tweaks — bigger text, rounder --- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* --- Video embed helper --- */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+/* --- Login box (computer login reminder) --- */
+.login-box {
+  background: #FFF8E1;
+  border: 2px solid #FFB300;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.login-box .login-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.login-box code {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: #FFE082;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  color: #5D4037;
+}
+
+/* ============================================================
+   PRINT STYLES — for laminating individual pages
+   ============================================================ */
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-source,
+  [data-md-toggle] { display: none !important; }
+
+  .md-main__inner { margin: 0; }
+  .md-content { max-width: 100% !important; }
+
+  .md-typeset { font-size: 12pt; }
+  .md-typeset h1 { font-size: 20pt; }
+  .md-typeset h2 { font-size: 15pt; }
+
+  .schedule-grid,
+  .pipeline { grid-template-columns: repeat(4, 1fr); }
+
+  /* keep colour backgrounds when printing */
+  .schedule-card,
+  .pipeline-step,
+  .challenge-card,
+  .login-box,
+  .badge {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* page break helpers */
+  .page-break { page-break-after: always; }
+  h2 { page-break-before: auto; }
+}
