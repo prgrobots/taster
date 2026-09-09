@@ -46,15 +46,6 @@ You only need to know 4 things to design today:
 
 ---
 
-## 💡 Ideas to customise your tag
-
-!!! example "Make it yours!"
-    - Change the **shape** — round, star, or custom
-    - Add a **symbol** from the TinkerCad shapes library
-    - Make your name **raised** or **cut into** the surface
-    - Add a pattern or texture
-
----
 
 ## When you're done
 

@@ -13,12 +13,13 @@ xArm 1S Robot Arm - old docs/
 xArm2/
 
 # Build output
-site/
 
 # Cache
 .cache/
 .firecrawl/
 .obsidian/
 
-# Large PDFs (root level)
-*.pdf
+# Large PDFs (root level only)
+/*.pdf
+# Allow pathway PDFs in docs
+!docs/**/*.pdf

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEAM Taster Day — Session Sheet</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 13pt;
+      color: #111;
+      padding: 24px 32px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    h1 { font-size: 22pt; margin-bottom: 4px; }
+    h2 { font-size: 14pt; margin: 18px 0 8px; }
+
+    .site-url {
+      font-size: 13pt;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .site-url a { color: #1565c0; text-decoration: none; font-weight: bold; }
+
+    /* Login box */
+    .login-box {
+      background: #e3f2fd;
+      border: 2px solid #1565c0;
+      border-radius: 8px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .login-box .label { font-weight: bold; font-size: 14pt; }
+    .login-field { display: flex; align-items: center; gap: 8px; }
+    .login-field span { color: #555; }
+    code {
+      background: #fff;
+      border: 1px solid #90caf9;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 13pt;
+      font-family: monospace;
+      font-weight: bold;
+      color: #1565c0;
+    }
+
+    /* Schedule table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+    }
+    th, td {
+      padding: 7px 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th { background: #f5f5f5; font-weight: bold; }
+    tr.break td { color: #555; font-style: italic; }
+    tr.break td:first-child { font-weight: bold; color: #333; font-style: normal; }
+    .time-col { white-space: nowrap; width: 70px; font-weight: bold; }
+
+    /* Print button */
+    .print-btn {
+      display: inline-block;
+      margin: 0 0 20px;
+      padding: 8px 20px;
+      background: #1565c0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 13pt;
+      cursor: pointer;
+    }
+    .print-btn:hover { background: #0d47a1; }
+
+    hr { border: none; border-top: 1px solid #ccc; margin: 20px 0; }
+
+    @media print {
+      .print-btn { display: none !important; }
+      body { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="print-btn" onclick="window.print()">🖨️ Print this sheet</button>
+
+  <h1>👋 STEAM Taster Day</h1>
+  <p class="site-url">Course site: <a href="https://prgrobots.github.io/taster/">https://prgrobots.github.io/taster/</a></p>
+
+  <div class="login-box">
+    <span class="label">💻 Computer Login</span>
+    <div class="login-field"><span>Username:</span> <code>tastee</code></div>
+    <div class="login-field"><span>Password:</span> <code>Password1</code></div>
+  </div>
+
+  <h2>🕐 Today's Schedule</h2>
+
+  <table>
+    <thead>
+      <tr><th class="time-col">Time</th><th>Activity</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="time-col">9:30</td>
+        <td>🖨️ Welcome &amp; 3D Printing intro — demo printer is running!</td>
+      </tr>
+      <tr>
+        <td class="time-col">10:00</td>
+        <td>🖨️ Design your name tag in TinkerCad &amp; export it</td>
+      </tr>
+      <tr class="break">
+        <td class="time-col">10:30</td>
+        <td>☕ Morning tea</td>
+      </tr>
+      <tr>
+        <td class="time-col">11:00</td>
+        <td>🦾 Meet xArm 2.0 — guided lesson &amp; stacking challenge</td>
+      </tr>
+      <tr class="break">
+        <td class="time-col">12:00</td>
+        <td>🥪 Lunch — your name tags are being printed!</td>
+      </tr>
+      <tr>
+        <td class="time-col">12:45</td>
+        <td>🤖 Meet Maqueen &amp; MakeCode intro</td>
+      </tr>
+      <tr>
+        <td class="time-col">1:15</td>
+        <td>🤖 Maqueen robot challenges</td>
+      </tr>
+      <tr>
+        <td class="time-col">2:00</td>
+        <td>⭐ Free choice — colour sensor challenge or more robots</td>
+      </tr>
+      <tr class="break">
+        <td class="time-col">2:45</td>
+        <td>🏁 Pack up, collect your name tag &amp; finish</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

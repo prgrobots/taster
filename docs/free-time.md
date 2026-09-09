@@ -60,6 +60,11 @@ Interested in doing more of this? Have a look at the courses at NMTafe:
 
 ## 🏁 Pack up at 2:45
 
+!!! tip "Before you go — please fill in the feedback form!"
+    It only takes 2 minutes and really helps us improve the day for future students.
+
+    👉 [Course Feedback form](feedback.md){ .md-button .md-button--primary }
+
 - Turn off your Maqueen robot (switch underneath)
 - Return the robot and micro:bit to the front
 - Return the xArm USB cable to the desk

@@ -1,5 +1,5 @@
 site_name: NMTafe Career Taster — Robotics & 3D Printing
-site_url: https://taster.netlify.app/
+site_url: https://prgrobots.github.io/taster/
 site_description: A one-day STEAM taster — design a name tag, program a robot arm, and drive a Maqueen robot at NMTafe Joondalup
 repo_url: https://github.com/your-username/taster-site
 repo_name: taster-site
@@ -46,7 +46,7 @@ nav:
     - "Behind the scenes — Printing": 3d-printing/printing.md
   - "🦾 Robot Arm":
     - "Meet xArm 2.0": xarm/index.md
-    - "Lesson — Fixed-Point Motion": xarm/lesson.md
+    - "Lesson — Pick & Place": xarm/lesson.md
     - "Challenge — Stack the Blocks!": xarm/challenge.md
     - "Advanced — Colour Sensor": xarm/advanced.md
   - "🤖 Maqueen Robotics":
@@ -54,7 +54,9 @@ nav:
     - "Challenge 1 — Make it Move": robotics/challenge-1.md
     - "Challenge 2 — Avoid Obstacles": robotics/challenge-2.md
     - "Challenge 3 — Follow a Line": robotics/challenge-3.md
+    - "Challenge 4 — Gamepad Remote": robotics/challenge-4.md
   - "⭐ Free Choice": free-time.md
+  - "📝 Feedback": feedback.md
 
 markdown_extensions:
   - admonition
